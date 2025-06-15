@@ -120,3 +120,9 @@ playwright install chromium
 ## ✅ 環境完成，建立任務內容
 可以在 VS Code 中，`.clinerules`資料夾底下，使用`markdown`檔案來描述任務內容，再CLINE介面讓AI 助理執行任務，實現以自然語言自動化執行完成所有操作。
 : 參考 [**任務1**](./.clinerules/任務1.md)
+
+![demo](./images/demo.gif)
+
+### 確認所有工具及環境運作正常後，可以自行調整CLINE: auto-approved上限跟允許的行為
+
+![auto-approved](./images/auto_approved.png)

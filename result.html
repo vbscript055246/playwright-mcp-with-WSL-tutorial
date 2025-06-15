@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>硬體品牌與規格分析</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .chart-container {
+            width: 30%;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        canvas {
+            max-width: 100%;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>硬體品牌與規格分析結果</h1>
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="cpuChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="mbChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="ramBrandChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="ramCapacityChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="ssdBrandChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="ssdCapacityChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="psuBrandChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="psuWattageChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="chassisChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // CPU Chart
+        const cpuCtx = document.getElementById('cpuChart').getContext('2d');
+        new Chart(cpuCtx, {
+            type: 'pie',
+            data: {
+                labels: ['AMD Ryzen7 9800X3D', 'AMD R7 9800X3D', 'AMD R7 7700', 'AMD R7 9700x'],
+                datasets: [{
+                    label: 'CPU 品牌與型號佔比',
+                    data: [4, 3, 3, 2],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'CPU 品牌與型號佔比'
+                    }
+                }
+            }
+        });
+
+        // MB Chart
+        const mbCtx = document.getElementById('mbChart').getContext('2d');
+        new Chart(mbCtx, {
+            type: 'pie',
+            data: {
+                labels: ['技嘉 B650 AORUS ELITE AX V2', '微星 X870 GAMING PLUS WIFI', '華碩 TUF GAMING B650-E WIFI', '華碩 TUF GAMING B650M-PLUS WIFI'],
+                datasets: [{
+                    label: '主機板品牌與型號佔比',
+                    data: [2, 3, 4, 1],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '主機板品牌與型號佔比'
+                    }
+                }
+            }
+        });
+
+        // RAM Brand Chart
+        const ramBrandCtx = document.getElementById('ramBrandChart').getContext('2d');
+        new Chart(ramBrandCtx, {
+            type: 'pie',
+            data: {
+                labels: ['十銓', '威剛', '金士頓'],
+                datasets: [{
+                    label: '記憶體品牌佔比',
+                    data: [2, 5, 3],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '記憶體品牌佔比'
+                    }
+                }
+            }
+        });
+
+        // RAM Capacity Chart
+        const ramCapacityCtx = document.getElementById('ramCapacityChart').getContext('2d');
+        new Chart(ramCapacityCtx, {
+            type: 'pie',
+            data: {
+                labels: ['16G*2', '32GB*2'],
+                datasets: [{
+                    label: '記憶體容量佔比',
+                    data: [5, 5],
+                    backgroundColor: ['#FF6384', '#36A2EB'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '記憶體容量佔比'
+                    }
+                }
+            }
+        });
+
+        // SSD Brand Chart
+        const ssdBrandCtx = document.getElementById('ssdBrandChart').getContext('2d');
+        new Chart(ssdBrandCtx, {
+            type: 'pie',
+            data: {
+                labels: ['美光 Crucial', '美光 Micron', '宏碁 Acer', '金士頓'],
+                datasets: [{
+                    label: '固態硬碟品牌佔比',
+                    data: [5, 5, 2, 1],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '固態硬碟品牌佔比'
+                    }
+                }
+            }
+        });
+
+        // SSD Capacity Chart
+        const ssdCapacityCtx = document.getElementById('ssdCapacityChart').getContext('2d');
+        new Chart(ssdCapacityCtx, {
+            type: 'pie',
+            data: {
+                labels: ['2TB', '1TB'],
+                datasets: [{
+                    label: '固態硬碟容量佔比',
+                    data: [9, 4],
+                    backgroundColor: ['#FF6384', '#36A2EB'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '固態硬碟容量佔比'
+                    }
+                }
+            }
+        });
+
+        // PSU Brand Chart
+        const psuBrandCtx = document.getElementById('psuBrandChart').getContext('2d');
+        new Chart(psuBrandCtx, {
+            type: 'pie',
+            data: {
+                labels: ['FSP 全漢', '海韻', 'XPG 威剛'],
+                datasets: [{
+                    label: '電源供應器品牌佔比',
+                    data: [4, 2, 3],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '電源供應器品牌佔比'
+                    }
+                }
+            }
+        });
+
+        // PSU Wattage Chart
+        const psuWattageCtx = document.getElementById('psuWattageChart').getContext('2d');
+        new Chart(psuWattageCtx, {
+            type: 'pie',
+            data: {
+                labels: ['1000W', '750W', '850W'],
+                datasets: [{
+                    label: '電源供應器瓦數佔比',
+                    data: [4, 2, 3],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '電源供應器瓦數佔比'
+                    }
+                }
+            }
+        });
+
+        // Chassis Chart
+        const chassisCtx = document.getElementById('chassisChart').getContext('2d');
+        new Chart(chassisCtx, {
+            type: 'pie',
+            data: {
+                labels: ['聯力 Lancool', 'BitFenix 亞瑟之劍', '視博通 SW300', 'MONTECH 君主 XR'],
+                datasets: [{
+                    label: '機殼品牌與型號佔比',
+                    data: [2, 3, 2, 2],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '機殼品牌與型號佔比'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
