@@ -60,17 +60,19 @@ code .
 
 在 CLINE的MCP server中加入以下設定
 ```json
-"mcpServers": {
-  "playwright": {
-    "command": "npx",
-    "args": ["@playwright/mcp@latest"],
-    "autoApprove": [
-      "browser_click",
-      "browser_close",
-      "browser_install",
-      "browser_navigate",
-      "browser_navigate_back"
-    ]
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"],
+      "autoApprove": [
+        "browser_click",
+        "browser_close",
+        "browser_install",
+        "browser_navigate",
+        "browser_navigate_back"
+      ]
+    }
   }
 }
 ```
