@@ -119,6 +119,7 @@ playwright install chromium
 ## ✅ 環境完成，建立任務內容
 可以在 VS Code 中，`.clinerules`資料夾底下，使用`markdown`檔案來描述任務內容，再CLINE介面讓AI 助理執行任務，實現以自然語言自動化執行完成所有操作。
 - 在CLINE介面輸入: 執行[**任務1**](./.clinerules/任務1.md)
+- 執行結果: [**result.html**](https://vbscript055246.github.io/playwright-mcp-with-WSL-tutorial/result.html)
 
 ![demo](./images/demo.gif)
 
