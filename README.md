@@ -2,6 +2,8 @@
 
 本專案展示在WSL上建立一個完整的 VS Code + Playwright + CLINE 開發環境，並展示 MCP server 及 API provider 的設定。以下是一步步的安裝與設定流程。
 
+![demo](images/demo.gif)
+
 node.js版的Playwright主要是給MCP sever使用，如果想要再寫一些功能性python腳本給AI使用，則使用新增虛擬環境中，python版的Playwright來執行
 
 ---
@@ -119,11 +121,11 @@ playwright install chromium
 ---
 
 ## ✅ 環境完成，建立任務內容
-可以在 VS Code 中，`.clinerules`資料夾底下，使用`markdown`檔案來描述任務內容，再CLINE介面讓AI 助理執行任務，實現以自然語言自動化執行完成所有操作。
-- 在CLINE介面輸入: 執行[**任務1**](./.clinerules/任務1.md)
-- 執行結果: [**result.html**](https://vbscript055246.github.io/playwright-mcp-with-WSL-tutorial/result.html)
+可以在 VS Code 中，`.clinerules`底下，建立`markdown`檔案來描述任務內容，實現以自然語言自動化執行完成所有操作。
 
-![demo](./images/demo.gif)
+在CLINE介面輸入: 執行[**任務1**](./.clinerules/任務1.md)
+
+執行結果: [**result.html**](https://vbscript055246.github.io/playwright-mcp-with-WSL-tutorial/result.html)
 
 ### 確認所有工具及環境運作正常後，可以自行調整CLINE: auto-approved上限跟允許的行為
 
