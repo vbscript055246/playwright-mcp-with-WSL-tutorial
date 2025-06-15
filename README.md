@@ -25,9 +25,9 @@ npm -v
 ---
 
 ## 2. 安裝 [Playwright](https://playwright.dev/docs/intro#installing-playwright)
-安裝過程中，如果有想使用Typescript可以自行選擇
-安裝過程中，會有選項會問要不要執行`playwright install(manual)`，選擇手動
-其他選項預設即可
+- 安裝過程中，如果有想使用Typescript可以自行選擇
+- 安裝過程中，會有選項會問要不要執行`playwright install(manual)`，選擇手動
+- 其他選項預設即可
 ```bash
 npm init playwright@latest
 ```
@@ -53,12 +53,12 @@ code .
 在 VS Code 擴充套件商店搜尋並安裝 `CLINE` 插件
 : 有需要可以順便安裝 `Python` 插件
 
-![CLINE plugin](images/CLINE_plugin.png)
-
+<img src="images/CLINE_plugin.png" width="300"> 
 
 ### 4-1. 設定 CLINE: MCP server
-[microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)
-在 CLINE的MCP server中加入以下設定：
+- [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)
+
+在 CLINE的MCP server中加入以下設定
 ```json
 "mcpServers": {
   "playwright": {
@@ -75,14 +75,13 @@ code .
 }
 ```
 
-![add MCP server](images/add_MCP_server.png)
-
+<img src="images/add_MCP_server.png" width="400"> 
 
 ### 4-2. （可選）設定 CLINE: API Provider
 
 在 CLINE 介面中選擇想要的 API Provider
 
-![choose API Provider](images/choose_API_Provider.png)
+<img src="images/choose_API_Provider.png" width="300"> 
 
 ---
 
@@ -99,9 +98,9 @@ playwright install chromium
 
 ## 6. 設定 VS Code Terminal Profile
 
-在 `.vscode/settings.json` 中加入以下內容：
-: 注意: 設定錯誤可能導致AI Agnet <font color="#f00">讀不到Terminal的內容</font>
-: (目前CLINE<font color="#f00">只支援zsh、bash、fish</font>)
+在 `.vscode/settings.json` 中加入以下內容
+- 注意: 設定錯誤可能導致AI Agnet <font color="#f00">讀不到Terminal的內容</font>
+- (目前CLINE<font color="#f00">只支援zsh、bash、fish</font>)
 
 ```json
 {
@@ -119,10 +118,10 @@ playwright install chromium
 
 ## ✅ 環境完成，建立任務內容
 可以在 VS Code 中，`.clinerules`資料夾底下，使用`markdown`檔案來描述任務內容，再CLINE介面讓AI 助理執行任務，實現以自然語言自動化執行完成所有操作。
-: 參考 [**任務1**](./.clinerules/任務1.md)
+- 在CLINE介面輸入: 執行[**任務1**](./.clinerules/任務1.md)
 
 ![demo](./images/demo.gif)
 
 ### 確認所有工具及環境運作正常後，可以自行調整CLINE: auto-approved上限跟允許的行為
 
-![auto-approved](./images/auto_approved.png)
+<img src="images/auto_approved.png" width="300"> 
