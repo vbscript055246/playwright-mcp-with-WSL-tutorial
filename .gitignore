@@ -1,6 +1,9 @@
 # Mission data
 *.txt
 
+# Python environment
+playwright-env/
+
 # Logs
 logs
 *.log
