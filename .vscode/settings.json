@@ -1,0 +1,9 @@
+{
+    "python.defaultInterpreterPath": "./playwright-env/bin/python3",
+    "terminal.integrated.defaultProfile.linux": "WSL",
+    "terminal.integrated.profiles.linux": {
+        "WSL": {
+            "path": "/bin/bash",
+        }
+    }
+}
