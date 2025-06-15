@@ -52,7 +52,8 @@ code .
 ## 4. 安裝 VS Code 擴充套件
 在 VS Code 擴充套件商店搜尋並安裝 `CLINE` 插件
 : 有需要可以順便安裝 `Python` 插件
-![CLINE plugin](images/CLINE plugin.png =300x)
+
+![CLINE plugin](./images/CLINE_plugin.png =300x)
 
 
 
@@ -74,13 +75,15 @@ code .
   }
 }
 ```
-![add MCP server](images/add MCP server.png =300x)
+
+![add MCP server](./images/add_MCP_server.png =300x)
 
 
 ### 4-2. （可選）設定 CLINE: API Provider
 
 在 CLINE 介面中選擇想要的 API Provider
-![choose API Provider](images/choose API Provider.png =250x)
+
+![choose API Provider](./images/choose_API_Provider.png =250x)
 
 ---
 
